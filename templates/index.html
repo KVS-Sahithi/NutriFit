@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/first.css" />
+
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8e9e9;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.glow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(174, 226, 137, 0.1);
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 9999;
+}
+
+#logo {
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    fill: none;
+    animation: fill 0.5s ease forwards;
+    transition: top 3.5s ease;
+}
+.elmt{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    top: 73%;
+    left: 6%;
+}
+
+#logo path:nth-child(1) {
+    stroke-dasharray: 560px;
+    stroke-dashoffset: 460px;
+    animation: line-anim 4s ease forwards;
+}
+
+#logo path:nth-child(2) {
+    stroke-dasharray: 720px;
+    stroke-dashoffset: 720px;
+    animation: line-anim 4s ease forwards;
+}
+
+#logo path:nth-child(3) {
+    stroke-dasharray: 500px;
+    stroke-dashoffset: 500px;
+    animation: line-anim 4s ease forwards;
+}
+
+#logo path:nth-child(4) {
+    stroke-dasharray: 580px;
+    stroke-dashoffset: 580px;
+    animation: line-anim 4s ease forwards;
+}
+
+#logo path:nth-child(5) {
+    stroke-dasharray: 500px;
+    stroke-dashoffset: 500px;
+    animation: line-anim 4s ease forwards;
+}
+
+#logo path:nth-child(6) {
+    stroke-dasharray: 700px;
+    stroke-dashoffset: 700px;
+    animation: line-anim 4s ease forwards;
+}
+
+#logo path:nth-child(7) {
+    stroke-dasharray: 850px;
+    stroke-dashoffset: 850px;
+    animation: line-anim 4s ease forwards;
+}
+
+#logo path:nth-child(8) {
+    stroke-dasharray: 600px;
+    stroke-dashoffset: 600px;
+    animation: line-anim 4s ease forwards;
+}
+
+#btn-green-tr {
+    min-width: 130px;
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px;
+    font-size: calc(100% + 40%);
+    font-weight: 600;
+    color: #ecf0f1;
+    transition: opacity 0.5s ease;
+    background-color: #2ecc71;
+    opacity: 0; 
+}
+
+#btn-green-tr:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+#btn-green-tr:hover {
+    box-shadow: -7px -7px rgba(128, 210, 162, 0.8), 7px 7px rgba(7, 47, 24, 0.8);
+    cursor: pointer;
+}
+
+#btn-green-tr:hover::before {
+    border: 0;
+}
+
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+@keyframes fill {
+    to {
+        fill: white;
+    }
+}
+        </style>
+  </head>
+  <body>
+    <div class = "container">
+      <div class ="menu">
+      </div>
+      <div class="wrapper">
+          
+        <div class="lwrap" id="green-box">
+          <svg id = "logo" width="658" height="114" viewBox="0 0 658 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M656.087 3.7002V2.2002H654.587H573.137H571.637V3.7002V24.2502V25.7502H573.137H599.537V109V110.5H601.037H626.687H628.187V109V25.7502H654.587H656.087V24.2502V3.7002Z" fill="none" stroke="black" stroke-width="3"/>
+            <path d="M561.749 3.7002V2.2002H560.249H534.599H533.099V3.7002V109V110.5H534.599H560.249H561.749V109V3.7002Z" fill="none" stroke="black" stroke-width="3"/>
+            <path d="M522.617 3.7002V2.2002H521.117H452.567H451.067V3.7002V109V110.5H452.567H478.217H479.717V109V67.9002H510.317H511.817V66.4002V46.4502V44.9502H510.317H479.717V25.7502H521.117H522.617V24.2502V3.7002Z" fill="none" stroke="black" stroke-width="3"/>
+            <path d="M435.479 3.7002V2.2002H433.979H408.329H406.829V3.7002V109V110.5H408.329H433.979H435.479V109V3.7002Z" fill="none" stroke="black" stroke-width="3"/>
+            <path d="M362.864 109.724L363.291 110.5H364.178H393.128H395.738L394.424 108.245L371.063 68.1578C378.14 65.7241 383.635 61.8456 387.446 56.475C391.635 50.7125 393.728 44.1541 393.728 36.8502C393.728 30.4079 392.218 24.5468 389.178 19.3029C386.113 13.9148 381.476 9.7212 375.344 6.70643C369.287 3.67873 361.995 2.2002 353.528 2.2002H310.478H308.978V3.7002V109V110.5H310.478H336.128H337.628V109V70.7502H341.391L362.864 109.724ZM361.49 46.5672L361.478 46.5783L361.467 46.5895C359.553 48.5036 356.507 49.6002 352.028 49.6002H337.628V26.5002H352.028C356.507 26.5002 359.553 27.5968 361.467 29.5109L361.478 29.5221L361.49 29.5332C363.536 31.4938 364.628 34.2196 364.628 37.9002C364.628 41.8055 363.521 44.6204 361.49 46.5672Z" fill="none" stroke="black" stroke-width="3"/>
+            <path d="M299.104 3.7002V2.2002H297.604H216.154H214.654V3.7002V24.2502V25.7502H216.154H242.554V109V110.5H244.054H269.704H271.204V109V25.7502H297.604H299.104V24.2502V3.7002Z" fill="none" stroke="black" stroke-width="3"/>
+            <path d="M142.793 3.7002V2.2002H141.293H115.643H114.143V3.7002V66.5502C114.143 76.1518 116.084 84.4234 120.043 91.2987L120.048 91.3072C123.988 98.0472 129.348 103.153 136.114 106.588L136.126 106.594L136.138 106.6C142.968 109.911 150.646 111.55 159.143 111.55C167.645 111.55 175.374 109.859 182.301 106.448C189.359 103.022 194.973 97.9259 199.12 91.1863C203.296 84.4006 205.343 76.1636 205.343 66.5502V3.7002V2.2002H203.843H178.193H176.693V3.7002V66.7002C176.693 72.7541 175.158 77.1858 172.3 80.2222C169.459 83.2409 165.304 84.8502 159.593 84.8502C153.879 84.8502 149.787 83.2401 147.051 80.2396C144.283 77.204 142.793 72.7656 142.793 66.7002V3.7002Z" fill="none" stroke="black" stroke-width="3"/>
+            <path d="M97.4998 110.5H98.9998V109V3.7002V2.2002H97.4998H71.8498H70.3498V3.7002V63.9383L30.2032 2.87614L29.7588 2.2002H28.9498H3.2998H1.7998V3.7002V109V110.5H3.2998H28.9498H30.4498V109V49.0428L70.5982 109.827L71.0429 110.5H71.8498H97.4998Z" fill="none" stroke="black" stroke-width="3"/>
+            </svg>
+            
+        <h2 class = "elmt">Your Personalized Path to Healthier You!</h2>
+        </div>
+        
+        <div class="rwrap">
+            <div class = "img1">
+              <img src = "/static/img/6.jpg" alt = " "/>
+              <img src = "/static/img/9.jpg" alt = " "/>
+              <img src = "/static/img/3.jpg" alt = " "/>
+          </div>
+          <div class = "img1">
+            <img src = "/static/img/4.jpg" alt = " "/>
+            <img src = "/static/img/5.jpg" alt = " "/>
+            <img src = "/static/img/1.jpg" alt = " "/>
+        </div>
+        <div class = "img1">
+          <img src = "/static/img/7.jpg" alt = " "/>
+          <img src = "/static/img/8.jpg" alt = " "/>
+          <img src = "/static/img/2.jpg" alt = " "/>
+          </div>
+          </div>
+      </div>
+    </div>
+
+    
+    <form action="/bodyinfo" >
+    <button id = "btn-green-tr"><span>Get Started</span></button>
+    </form>
+
+
+    <script>
+      // JavaScript code goes here
+      // JavaScript code to handle animations and interactions
+
+  document.addEventListener('DOMContentLoaded', function () {
+      var logo = document.getElementById('logo');
+      var button = document.getElementById('btn-green-tr');
+
+      logo.addEventListener('animationend', function () {
+          logo.style.top = '40%';
+      });
+
+      logo.addEventListener('transitionend', function () {
+          button.style.opacity = 1;
+      });
+  });
+
+  document.addEventListener('mousemove', function (event) {
+      var glow = document.createElement('div');
+      glow.className = 'glow';
+      document.body.appendChild(glow);
+
+      glow.style.left = event.clientX + 'px';
+      glow.style.top = event.clientY + 'px';
+      glow.style.transform = 'scale(1.5)';
+
+      setTimeout(function () {
+          document.body.removeChild(glow);
+      }, 100);
+  });
+
+  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src = "/static/js/first.js"></script>
+  </body>
+</html>

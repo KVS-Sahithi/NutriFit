@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <title>NutriFit</title>
+</head>
+<body>
+    <div class="marquee">
+        <div id="facts" class="facts">
+
+        </div>
+    </div>
+    <hr class="green-line">
+    <div class="heading">
+        Nutrition Agent
+    </div>
+    <hr class="green-line">
+    <div class="content-container">
+        <div class="form-container">
+            <h2 class="p-3 title">Enter your food intake</h2>
+            <form id="myForm" action="/nutrition" class="px-5" method="POST">
+                <textarea name="userInput" class="form-control fitness-goal" placeholder="Enter your food intake">{{food_intake}}</textarea>
+                <br>
+                <button type="submit" class="btn text-bg-success">Submit</button>
+            </form>
+            <div class="boxes-container mt-4 p-4">
+                <div class="row">
+                    <div class="card bg-custom1">
+                        <h3 class="bg-transparent">Calories</h3>
+                        <p>{{nutrition_info.calories}}</p>
+                    </div>
+                    <div class="card bg-custom2">
+                        <h3>Protein</h3>
+                        <p>{{nutrition_info.protein}} g</p>
+                    </div>
+                    <div class="card bg-custom3">
+                        <h3>Fats</h3>
+                        <p>Total Fat: {{nutrition_info.total_fat}} g</p>
+                        <p>Saturated Fat: {{nutrition_info.saturated_fat}} g</p>
+                        <p>Trans Fat:{{nutrition_info.trans_fat}} 0 g</p>
+                        <p>Monounsaturated Fat: {{nutrition_info.monounsaturated_fat}} g</p>
+                        <p>Polyunsaturated Fat: {{nutrition_info.polyunsaturated_fat}} g</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card bg-custom4">
+                        <h3>Omega Fats</h3>
+                        <p>Omega-3 Fatty Acids: {{nutrition_info.omega_3}}0 g</p>
+                        <p>Omega-6 Fatty Acids: {{nutrition_info.omega_6}}0 g</p>
+                    </div>
+                    <div class="card bg-custom1">
+                        <h3>Vitamins</h3>
+                        <p>Vitamin A: {{nutrition_info.vitamin_a}} µg</p>
+                        <p>Vitamin C: {{nutrition_info.vitamin_c}} mg</p>
+                        <p>Vitamin D: {{nutrition_info.vitamin_d}} µg</p>
+                        <p>Vitamin E: {{nutrition_info.vitamin_e}} mg</p>
+                        <p>Vitamin K: {{nutrition_info.vitamin_k}} µg</p>
+                    </div>
+                    <div class="card bg-custom2">
+                        <h3>Diet Labels</h3>
+                        <p>{{', '.join(nutrition_info.diet_labels)}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card bg-custom3">
+                        <h3>Minerals</h3>
+                        <p>Calcium: {{nutrition_info.calcium}} mg</p>
+                        <p>Iron: {{nutrition_info.iron}} mg</p>
+                        <p>Magnesium: {{nutrition_info.magnesium}} mg</p>
+                        <p>Phosphorus: {{nutrition_info.phosphorus}} mg</p>
+                        <p>Zinc: {{nutrition_info.zinc}} mg</p>
+                    </div>
+                    <div class="card bg-custom4">
+                        <h3>Other Nutrients</h3>
+                        <p>Cholesterol: {{nutrition_info.cholesterol}} mg</p>
+                        <p>Sodium: {{nutrition_info.sodium}} mg</p>
+                        <p>Potassium: {{nutrition_info.potassium}} mg</p>
+                        <p>Carbohydrates: {{nutrition_info.total_carbohydrates}} g</p>
+                        <p>Dietary Fiber: {{nutrition_info.dietary_fiber}} g</p>
+                        <p>Sugars: {{nutrition_info.sugars}} g</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="boxes-container">
+            <div class="nutrition-analysis workout-plan m-3 p-3">
+                <h2>Nutritional Assessment Report</h2>
+                <h3>Nutritional Gaps:</h3>
+                <p><strong>Calories:</strong> Your calorie intake of 148 is significantly below the recommended daily intake of 2,000-2,400 calories for a female of your age, height, and weight.</p>
+                <p><strong>Protein:</strong> Your protein intake of 7.686 g falls short of the recommended daily intake of 0.8-1.2 grams per kilogram of body weight. This equates to approximately 52-78 grams of protein per day.</p>
+                <p><strong>Total Carbohydrates:</strong> Your total carbohydrate intake of 11.712 g is extremely low for an active individual. The recommended daily intake is 45-65% of total calories, which translates to approximately 250-364 grams of carbohydrates.</p>
+                <p><strong>Dietary Fiber:</strong> Your dietary fiber intake is 0.0 g, which is significantly below the recommended intake of 25-38 grams per day.</p>
+                <p><strong>Vitamin C:</strong> Your vitamin C intake is 0.0 mg, falling short of the recommended daily intake of 75-90 mg.</p>
+                <h3>Dietary Adjustments:</h3>
+                <p><strong>Increase calorie intake:</strong> Aim to consume around 2,000-2,400 calories per day. This can be achieved by adding healthy snacks between meals, such as fruits, yogurt, or nuts.</p>
+                <p><strong>Increase protein intake:</strong> Include lean protein sources in your meals, such as chicken, fish, tofu, beans, or lentils. Aim for a daily protein intake of around 52-78 grams.</p>
+                <p><strong>Increase carbohydrate intake:</strong> Add whole grains, fruits, and vegetables to your meals. Start by gradually increasing your carbohydrate intake to 250-300 grams per day.</p>
+                <p><strong>Increase dietary fiber intake:</strong> Include fiber-rich foods in your diet, such as fruits, vegetables, whole grains, and legumes. Aim for a daily fiber intake of 25-38 grams.</p>
+                <p><strong>Increase vitamin C intake:</strong> Include citrus fruits, berries, or fortified foods in your diet to boost your vitamin C intake.</p>
+                <h3>Additional Considerations:</h3>
+                <p>Your current activity level is not mentioned, but if you are physically active, you may need to increase your calorie and carbohydrate intake further.</p>
+                <p>Any dietary restrictions should be taken into account when making dietary adjustments.</p>
+                <p>If you have any concerns or questions, it is advisable to consult with a registered dietitian or healthcare professional for personalized guidance.</p>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var facts = JSON.parse({{ facts|tojson }});  
+        console.log(facts);
+        var factsDiv = document.getElementById('facts');
+        
+        for (var i = 0; i < facts.length; i++) {
+            var newFactDiv = document.createElement('div');
+            newFactDiv.textContent = facts[i];
+            newFactDiv.classList.add('item');
+            factsDiv.appendChild(newFactDiv);
+        }
+
+        var outputDiv = document.querySelector('.workout-plan');
+        var suggestions = JSON.parse({{ nutrition_suggestions|tojson }});
+        console.log(suggestions);
+        outputDiv.innerHTML = suggestions.join(' '); 
+    </script>
+</body>
+</html>

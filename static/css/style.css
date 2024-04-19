@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #f8e9e9;
+}
+.marquee {
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+}
+.facts {
+    display: flex;
+    width: max-content;
+    animation: scroll 400s linear infinite;
+}
+.item {
+    color:  #3e9661;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+@keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+.green-line {
+    border: 1px solid green;
+    margin: 0;
+    padding: 0;
+}
+.heading{
+    text-align: center;
+    font-size: 9rem;
+    font-weight: 700;
+    color: #3e9661;
+}
+.vertical-line {
+    border-left: 1px solid #000;  
+    height: 95rem;  
+    position: absolute;
+    left: 50%; 
+    opacity: 0.5; 
+    border-color: #3e9661 !important;
+}
+.content-container {
+    display: flex;
+}
+.form-container,
+.boxes-container {
+    flex: 1;
+}
+.card{
+    max-width: 15rem !important;
+    border: 1px solid #000;
+    padding: 2rem;
+    height: 15rem !important;
+}
+.card h3, .card p {
+    background-color: transparent !important;
+    text-align: center;
+}
+.card p {
+    line-height: 0.7;
+}
+.row, .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-custom1 {
+    background-color: #ffc58f !important;
+}
+.bg-custom2 {
+    background-color: #bec2ff !important;
+}
+.bg-custom3 {
+    background-color: #c892f3 !important;
+}
+.bg-custom4 {
+    background-color: #feffbe !important;
+}
+textarea{
+    height: 10rem !important;
+}
+.title{
+    margin-left: 2rem;
+    margin-top: 1.6rem;
+    color: #3e9661;
+}
+.youtube-suggestions{
+    padding: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3e9661;
+}
+h2 {
+    color: #3e9661;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+ul li {
+    margin-bottom: 10px;
+}
+.workout-plan{
+    color:  #3e9661;
+}

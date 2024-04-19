@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8e9e9 !important; 
+}
+.main{
+    border-radius: 2rem;
+    background-color: #f8e9e9;
+}
+label, h2{
+    color: #3e9661 !important;
+}
+.next-btn{
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #3e9661 !important;
+    color: white !important;
+    cursor: pointer;
+}
+.gender-label{
+    margin-right: 1rem;
+}
+@media (max-width: 420px){
+    .gender-container{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+body {
+  overflow: hidden;
+  background-color: #fff;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.container {
+  width: 95%;
+  height: 100%;
+  margin: auto;
+}
+.container .menu {
+  margin: 15px 0px;
+}
+.container .menu .logo img {
+  width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+.wrapper .lwrap {
+  width: 90%;
+}
+.wrapper .lwrap h1 {
+  font-size: 50px;
+  font-weight: 300;
+  text-transform: capitalize;
+  line-height: 110%;
+  color: #141313;
+  margin-top: 40px;
+}
+.wrapper .lwrap h1 span {
+  font-weight: bold;
+}
+.wrapper .lwrap p {
+  padding: 20px 80px 30px 0px;
+}
+.wrapper .lwrap .button {
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-gap: 20px;
+  margin-top: 30px;
+}
+.wrapper .lwrap .button a {
+  display: grid;
+  place-items: center;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  position: relative;
+  font-weight: 500;
+  border-radius: 20px;
+}
+.wrapper .lwrap .button .vdbtn {
+  display: flex;
+  place-items: center;
+  cursor: pointer;
+}
+.wrapper .lwrap .button .vdbtn p {
+  font-size: 20px;
+  padding: 0px 10px;
+}
+.wrapper .lwrap .button .vdbtn img {
+  width: 35px;
+}
+
+.rwrap {
+  display: flex;
+}
+.rwrap .img1 {
+  transform: rotate(20deg) translate(-200px, -65px);
+  transform-origin: center center;
+}
+.rwrap .img1 img {
+  width: 330px;
+  height: 380px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 3px 15px;
+}/*# sourceMappingURL=style.css.map */
+

@@ -1,0 +1,6 @@
+flask
+requests
+textwrap3
+python-dotenv
+langchain-google-genai
+google-generativeai
